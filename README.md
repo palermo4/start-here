@@ -1,6 +1,2 @@
-<style>
-  .bg { background-color: #7777FF; }  
-</style>
 # start-here
-HERE Location Services Workshop
-{: .bg }
+<p style="background-color:#7777ff;">HERE Location Services Workshop</p>
