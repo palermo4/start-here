@@ -5,17 +5,19 @@
 
 ## Overview
 
-## Prerequisites
+This workshop will guide you how to implement location services using HERE APIs within SAPUI5 environment. The workshop concludes with an SAPUI5 app showcasing a few features of the HERE Location Suite API Package. The following is an outline of what is covered:
 
-* HERE Developer Account
+### [Prerequisites](./02.md)
 
-* SAP Developer Account
+* Establishing accounts with HERE and SAP 
 
 * Basic Developer Experience
 
-## Discovery & Configuration
+### [Discovery](./03.md)
 
-* HERE Location Suite API Package
+* Locating the HERE Location Suite API Package
+
+### [Configuration](./04.md)
 
 * Creating Destinations at SAP Cloud Platform Cockpit
 
@@ -27,12 +29,8 @@
 
 * Create /here/here.properties to Store APP_ID & APP_CODE
 
-## Development
+### [Development](./05.md)
 
 * Modify View
 
 * Modify Controller
-
-## Beyond
-
-???
