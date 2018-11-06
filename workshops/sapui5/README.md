@@ -1,5 +1,7 @@
+<img src="/images/workshop_sapui5.jpg" width="890" />
 
-# SAPUI5 Workshop (draft)
+| ![Overview](/images/01.png)<br>Overview | [![Prerequisites](/images/02_off.png)<br>Prerequisites](./02.md) | [![Discovery](/images/03_off.png)<br>Discovery](./03.md) | [![Configuration](/images/04_off.png)<br>Configuration](./04.md) | [![Development](/images/05_off.png)<br>Development](./05.md)
+| :---: | :---: | :---: | :---: | :---: |
 
 ## Overview
 
