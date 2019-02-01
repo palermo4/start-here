@@ -31,6 +31,4 @@ This workshop will guide you how to implement location services using HERE APIs 
 
 ### [Development](./05.md)
 
-* Modify View
-
-* Modify Controller
+* Modify View and Show Map
