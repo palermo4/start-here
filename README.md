@@ -1,6 +1,6 @@
 # HERE Workshops
 
 
-[JavaScript Workshop](/workshops/javascript/README.md)
+[JavaScript SDK Intro](/workshops/javascript/README.md)
 
-[SAPUI5 Workshop](/workshops/sapui5/README.md)
+[SAPUI5 Maps Intro](/workshops/sapui5/README.md)
