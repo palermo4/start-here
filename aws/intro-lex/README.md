@@ -1,34 +1,34 @@
-<img src="./workshop_sapui5.jpg" width="890" />
+<img src="./workshop_header.jpg" width="890" />
 
-| ![Overview](../../images/01.png)<br>Overview | [![Prerequisites](../../images/02_off.png)<br>Prerequisites](./02.md) | [![Discovery](../../images/03_off.png)<br>Discovery](./03.md) | [![Configuration](../../images/04_off.png)<br>Configuration](./04.md) | [![Development](../../images/05_off.png)<br>Development](./05.md)
+| ![Overview](../../images/01.png)<br>Overview | [![Prerequisites](../../images/02_off.png)<br>Prerequisites](./02.md) | [![Design](../../images/03_off.png)<br>Design](./03.md) | [![Development](../../images/04_off.png)<br>Development](./04.md) | [![Optional](../../images/05_off.png)<br>Optional](./05.md)
 | :---: | :---: | :---: | :---: | :---: |
 
-## Overview of SAPUI5 Geocoder Workshop
+# Lex Workshop
 
-This workshop will guide you how to use geocoding location services using HERE APIs within an SAPUI5 environment. The workshop concludes with an SAPUI5 app showcasing a few features of the HERE Location Suite API Package. The following is an outline of what is covered:
+## Overview
+
+This workshop will guide you how to use HERE APIs within a Lex chatbot using location terms. The following is an outline of what is covered:
 
 ### [Prerequisites](./02.md)
 
-* Establishing accounts with HERE and SAP 
+* Establishing accounts with HERE and AWS 
 
 * Basic Developer Experience
 
-* IMPORTANT: Completing the base SAPUI5 workshop
+### [Design](./03.md)
 
-### [Discovery](./03.md)
+* Design the Conversational UX
 
-* Locating the HERE Location Suite API Package
+* Create Intents and Slots
 
-* Selecting the HERE Geocode API
+### [Development](./04.md)
 
-### [Configuration](./04.md)
+* Create AWS Lambda to host Lex processing
 
-* Create Geocode Destination at SAP Cloud Platform Cockpit
+* Use HERE API to respond to provide location information
 
-* Configure Destinations in neo-app.json
+### [Optional](./05.md)
 
-### [Development](./05.md)
+* Add another intent to Lex, use another HERE API
 
-* Modify View 
-
-* Call Geocode API in Code
+* Integrate Lex into 3rd party, such as Slack
