@@ -12,23 +12,19 @@ This workshop will guide you how to use HERE APIs within a Lex chatbot using loc
 ### [Prerequisites](./02.md)
 
 * Establishing accounts with HERE and AWS 
-
 * Basic Developer Experience
 
 ### [Design](./03.md)
 
 * Create Lex Chatbot
-
 * Design the Conversational UX
 
 ### [Development](./04.md)
 
 * Create AWS Lambda to host Lex processing
-
 * Use HERE API provide location data
 
 ### [Optional](./05.md)
 
 * Add new Intent, use another HERE API
-
 * Integrate with 3rd party services
