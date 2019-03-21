@@ -1,1 +1,1 @@
-# AWS Workshops
+# Lex Workshops
