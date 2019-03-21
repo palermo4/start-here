@@ -17,18 +17,18 @@ This workshop will guide you how to use HERE APIs within a Lex chatbot using loc
 
 ### [Design](./03.md)
 
-* Design the Conversational UX
+* Create Lex Chatbot
 
-* Create Intents and Slots
+* Design the Conversational UX
 
 ### [Development](./04.md)
 
 * Create AWS Lambda to host Lex processing
 
-* Use HERE API to respond to provide location information
+* Use HERE API provide location data
 
 ### [Optional](./05.md)
 
-* Add another intent to Lex, use another HERE API
+* Add new Intent, use another HERE API
 
-* Integrate Lex into 3rd party, such as Slack
+* Integrate with 3rd party services
