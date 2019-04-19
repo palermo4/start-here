@@ -1,0 +1,86 @@
+{
+  "Response": {
+    "MetaInfo": {
+      "Timestamp": "2019-04-18T17:30:04.845+0000",
+      "NextPageInformation": "2"
+    },
+    "View": [
+      {
+        "_type": "SearchResultsViewType",
+        "ViewId": 0,
+        "Result": [
+          {
+            "Relevance": 1,
+            "Distance": -93,
+            "Direction": 263.9,
+            "MatchLevel": "district",
+            "MatchQuality": {
+              "Country": 1,
+              "State": 1,
+              "County": 1,
+              "City": 1,
+              "District": 1,
+              "PostalCode": 1
+            },
+            "Location": {
+              "LocationId": "NT_KAsQ7rkDwrOhABfdwuimLD",
+              "LocationType": "area",
+              "DisplayPosition": {
+                "Latitude": 41.88304,
+                "Longitude": -87.65335
+              },
+              "MapView": {
+                "TopLeft": {
+                  "Latitude": 41.88935,
+                  "Longitude": -87.66707
+                },
+                "BottomRight": {
+                  "Latitude": 41.87635,
+                  "Longitude": -87.63706
+                }
+              },
+              "Address": {
+                "Label": "West Loop, Chicago, IL, United States",
+                "Country": "USA",
+                "State": "IL",
+                "County": "Cook",
+                "City": "Chicago",
+                "District": "West Loop",
+                "PostalCode": "60607",
+                "AdditionalData": [
+                  {
+                    "value": "United States",
+                    "key": "CountryName"
+                  },
+                  {
+                    "value": "Illinois",
+                    "key": "StateName"
+                  },
+                  {
+                    "value": "Cook",
+                    "key": "CountyName"
+                  },
+                  {
+                    "value": "N",
+                    "key": "PostalCodeType"
+                  }
+                ]
+              },
+              "MapReference": {
+                "ReferenceId": "944997052",
+                "MapId": "NAAM19104",
+                "MapVersion": "Q1/2019",
+                "MapReleaseDate": "2019-04-03",
+                "SideOfStreet": "neither",
+                "CountryId": "21000001",
+                "StateId": "21002247",
+                "CountyId": "21002623",
+                "CityId": "21002647"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
