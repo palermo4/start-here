@@ -21,8 +21,8 @@ This workshop will guide you how to use HERE APIs within a Lex chatbot using loc
 
 ### [Development](./04.md)
 
-* Create AWS Lambda to host Lex processing
-* Use HERE API provide location data
+* Create AWS Lambda Function to host Lex processing
+* Integrate Lambda Function with Lex
 
 ### [Optional](./05.md)
 
