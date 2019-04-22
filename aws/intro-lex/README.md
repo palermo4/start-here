@@ -27,4 +27,4 @@ This workshop will guide you how to use HERE APIs within a Lex chatbot using loc
 ### [Optional](./05.md)
 
 * Add new Intent, use another HERE API
-* Integrate with 3rd party services
+
