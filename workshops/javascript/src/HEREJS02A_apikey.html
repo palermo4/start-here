@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>HERE HTML Client v3.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />  
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+</head>
+
+<body>
+    <div id="mapContainer" style="width: 1024px; height: 768px; background: white;"></div>
+    <script>
+
+let M = {
+            'Init': { // developer.here.com for app_id and app_code
+                'apikey': 'APIKEY',
+                useHTTPS: true
+            },
+            "Behavior": {},    // Manage map behaviors
+            "Container": {},   // Reference to DOM object containing map
+            "Geo": {},         // Geocoder service
+            "Lat": 38.89037,   // Latitude
+            "Layers": {},      // Map layers
+            "Lng": -100,       // Longitude
+            "Map": {},         // Map object
+            "Platform": {},    // Core to HERE API
+            "UI": {},          // User interface and interaction
+            "Zoom": 4,         // 1 == global, 15 == street level
+            "Cities": [
+                { "City": "Chicago, IL", "Pos": { lat: 0.0, lng: 0.0 } },
+                { "City": "Washington, DC", "Pos": { lat: 0.0, lng: 0.0 } },
+                { "City": "San Frnacisco, CA", "Pos": { lat: 0.0, lng: 0.0 } },
+                { "City": "Phoenix, AZ", "Pos": { lat: 0.0, lng: 0.0 } },
+                { "City": "Seattle, WA", "Pos": { lat: 0.0, lng: 0.0 } }
+            ]
+        };
+
+        // Obtain reference to #mapContainer in DOM
+        M.Container = document.getElementById('mapContainer');
+
+        // Store initialized platform object
+        M.Platform = new H.service.Platform(M.Init);
+
+        // Store reference to geocoding service
+        M.Geo = M.Platform.getGeocodingService();
+
+        // Store reference to layers object
+        M.Layers = M.Platform.createDefaultLayers();
+
+        // Create map object initialized with container and style
+        // Set map style - example M.Layers.satellite.map
+        M.Map = new H.Map(M.Container, M.Layers.vector.normal.map);
+
+        // Create behavior object initialized with map object
+        M.Behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(M.Map));
+
+        // Store UI object associated with map object and layers object
+        M.UI = H.ui.UI.createDefault(M.Map, M.Layers);
+
+        // Define function to display map using values stored in xy object
+        function displayMap() {
+            M.Map.setCenter({ lat: M.Lat, lng: M.Lng });
+            M.Map.setZoom(M.Zoom);
+        }
+        displayMap();
+
+        // Display lines between all cities
+        function addLines() {
+            let line = new H.geo.LineString();
+            for (var i = M.Cities.length; i--;) {
+
+                line.pushPoint(M.Cities[i].Pos);
+                for (var ii = M.Cities.length; ii--;) {
+
+                    line.pushPoint(M.Cities[ii].Pos);
+                }
+            }
+            M.Map.addObject(new H.map.Polyline(line, { style: { lineWidth: 2, strokeColor: 'red' } }));
+        }
+
+        // Display marker on map for each city, then add lines
+        function initCities() {
+            let promises = M.Cities.map(place => {
+                let geoParams = {
+                    searchText: place.City,
+                    jsonattributes: 1
+                };
+                return new Promise((resolve, reject) => {
+                    M.Geo.geocode(geoParams,
+                        function (result) {
+                            let first = result.response.view[0].result[0].location.displayPosition;
+                            place.Pos.lat = first.latitude;
+                            place.Pos.lng = first.longitude;
+                            var mark = new H.map.Marker(place.Pos);
+                            M.Map.addObject(mark);
+                            resolve(result);
+                        }, function (err) {
+                            console.log(err);
+                            return reject(err);
+                        }
+                    )
+                });
+            });
+            Promise.all(promises).then(x => { addLines(); });
+        }
+
+        initCities();
+    </script>
+</body>
+
+</html>
