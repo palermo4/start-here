@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <title>Interactive Map</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+    <!-- HERE JS V3.1 -->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <!-- behavior -->
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <!-- controls for ui -->
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+
+    <!-- AWS SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.780.0.min.js"></script>
+    <style>
+        body {padding: 0; margin: 0; background-color: #888888;}
+        #outer {width: 800px; height: 600px;box-shadow: 5px 5px 25px 10px rgba(0,0,0,0.5);}
+        #mapContainer {width: 800px; height: 600px;} /* 110vw  100vh */
+        #toggleScreen {cursor:pointer;margin:5px; box-shadow: 0px 10px 0px -5px #DCDEC9, 0px -10px 0px -5px #DCDEC9, 10px 0px 0px -5px #DCDEC9, -10px 0px 0px -5px #DCDEC9, 0px 0px 0px 2px #FF0000, 2px 2px 5px 2px rgba(0,0,0,0);font-size: smaller; font-weight: bolder;text-align: center;}
+        #box {position: fixed; left: 10px;top: 10px;
+            background: linear-gradient(to bottom, #DCDEC9 0%, #ABC0C5 100%);
+            box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.49);
+            border: 1px solid #1C6EA4;
+            padding: 5px;
+            border-radius: 15px;
+            z-index: 9999;
+        }
+        #voiceBox img {cursor: crosshair;width: 25px;}
+        .currentVoice {
+            background: radial-gradient(ellipse at center, #f1d6d6 0%, #DCDEC9 100%);
+            border-radius:45px;
+        }
+        .speaking {
+            box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 5px, #ff8000 0 -5px 10px, red 0 -10px 15px, 0px 0px 0px 0px rgba(0,0,0,0);
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+    <div id="mapContainer">
+        <div id="box">
+            <div id="toggleScreen">Full Screen</div>
+            <hr/>
+            <div id="voiceBox">
+            <img id="imgMatthew" title="Matthew" src="https://www.freeiconspng.com/uploads/face-head-man-person-profile-user-icon--30.png"  class="currentVoice" />
+            <img id="imgJoanna" title="Joanna"  src="https://www.freeiconspng.com/uploads/face-head-woman-female-icon-0.png" />
+            <img id="imgJustin" title="Justin"  src="https://www.freeiconspng.com/uploads/face-head-man-icon-24.png"  />
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Demo Logic -->
+    <script type="text/javascript" src="./config.js"></script>
+    <script type="text/javascript" src="./polly.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
